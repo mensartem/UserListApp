@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">UserListApp</string>
+    <string name="app_name">User List App</string>
+    <string name="list_fragment_label">List Fragment</string>
+    <string name="no_connection">Please check internet connection</string>
+    <string name="no_list">The list was empty.\nPlease refresh the page.</string>
+    <string name="data_fetching">Data is loading.</string>
+
 </resources>
