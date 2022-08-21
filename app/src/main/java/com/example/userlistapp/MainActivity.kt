@@ -1,18 +1,16 @@
 package com.example.userlistapp
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.example.userlistapp.ui.main.MainFragment
 
-class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
+import com.example.userlistapp.base.BaseActivity
+import com.example.userlistapp.databinding.ActivityMainBinding
+
+
+class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(MainViewModel::class) {
+
+    override val layoutRes: Int
+        get() = R.layout.activity_main
+
+    override fun initialize() {
     }
 }
